@@ -1,7 +1,12 @@
+'use client'
+
+import { useSelector } from 'react-redux'
 import styles from './index.module.css'
-import { COLORS } from '../constants'
+import { COLORS } from '@/constants'
 
 const Toolbox = () => {
+
+    const activeMenuItem = useSelector((state) => state.menu)
 
     const updateBrushSize = (e) => {
 
@@ -19,9 +24,9 @@ const Toolbox = () => {
                 </div>
             </div>
             <div>
-                <h4 className={styles.toolText}>Brush Size</h4>
+                <h4 className={styles.toolText}>Brush Size {activeMenuItem}</h4>
                 <div className={styles.itemContainer}>
-                    <input type="range" min={1} max={10} step={1} on onChange={updateBrushSize} />
+                    <input type="range" min={1} max={10} step={1} on="true" onChange={updateBrushSize} />
                 </div>
             </div>
         </div>

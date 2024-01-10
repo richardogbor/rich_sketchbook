@@ -8,4 +8,12 @@
     WHITE: 'white'
  }
 
- export {COLORS}
+ const Menu_ITEMS = {
+   PENCIL: 'PENCIL',
+   ERASER: 'ERASER',
+   UNDO: 'UNDO',
+   REDO: 'REDO',
+   DOWNLOAD: 'DOWNLOAD'
+ }
+
+ export {COLORS, Menu_ITEMS}
